@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    list-style: none;
+}
+.box01 ul li h4{
+    margin: 20px;
+    font-size: 14px;
+    color: rgb(44, 100, 156);
+    font-weight: 400;
+}
+
+.box01 ul em img{
+
+    width:15%;
+    height: 15%;
+}
+.box01  {
+    width: 335px;
+    position: relative;
+}
+.box01 ul em img{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
