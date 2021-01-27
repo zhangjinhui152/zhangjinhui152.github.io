@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+text-decoration: none;
+}
+.nav {
+    padding-left: 50px;
+    border-top: 1px solid rgb(245, 172, 83);
+    height: 30px;
+    background-color: bisque;
+}
+.nav ul li {
+    height: 20px;
+    
+    padding: 5px 10px;
+    float: left;
+    list-style: none;
+    line-height: 20px;
+    
+}
+.nav ul li a{
+    display: inline-block;
+    
+    /* width: 50px; */
+    
+    font-size: 5px;
+    text-align: center;
+    
+    color: rgb(73, 24, 22);
+
+}
+.nav ul li:hover{
+    background-color: antiquewhite;
+}
