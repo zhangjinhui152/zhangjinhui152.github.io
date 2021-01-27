@@ -33,3 +33,15 @@ li{
     position: relative;
     background-color: bisque;
 }
+.LinkAll{
+    height: 50px;
+    width: 300px;
+    margin: 0 auto;
+}
+.LinkAll a {
+    text-decoration: none;
+    color: crimson;
+}
+.LinkAll a:hover{
+    color: blue;
+}
