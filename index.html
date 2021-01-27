@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,34 @@
 </head>
 <script src="./js/Didplay.js"></script>
 <link rel="stylesheet" href="./css/index.css">
+
 <body>
     <div class="header">
         <div class="nav">
             <ul>
                 <li><a href="#">导航</a></li>
                 <li><a href="#">建议</a></li>
-                <li class="LinkTo" id="LinkTo1" onmouseover="display()" onmouseout="displayNo()"><a href="#">跳转网页</a></li>
+                <li class="LinkTo" id="LinkTo1" onmouseover="display()" onmouseout="displayNo()"><a href="#">跳转网页</a>
+                    <div class="Link">
+                        <ul id="LinkTo2" onmouseover="display()" onmouseout="displayNo()">
+                            <li><a href="demo01Tb_promo.html">第一</a></li>
+                            <li><a href="demo01Tb_promo.html">第二</a></li>
+
+                        </ul>
+                </li>
                 <li><a href="#">测试</a></li>
                 <li><a href="#">离开</a></li>
             </ul>
 
-            <div class="Link" >
-                <ul id="LinkTo2" onmouseover="display()" onmouseout="displayNo()">
-                    <li><a href="demo01Tb_promo.html">第一</a></li>
-                    <li><a href="demo01Tb_promo.html">第二</a></li>
-                    
-                </ul>
-            </div>
+
         </div>
-        
+    </div>
+
 
     </div>
 </body>
 <style>
 
 </style>
+
 </html>

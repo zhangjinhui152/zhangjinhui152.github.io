@@ -8,14 +8,16 @@ a {
 }
 
 .nav {
-    position: relative;
+    
     padding-left: 50px;
     border-top: 1px solid rgb(245, 172, 83);
     height: 30px;
     background-color: bisque;
+    box-shadow: 1px 1px 10px rgba(10, 10, 10, 0.37);
 }
 
 .nav ul li {
+    position: relative;
     height: 20px;
 
     padding: 5px 10px;
@@ -45,15 +47,18 @@ a {
 .Link ul {
     display: none;
     position: absolute;
-    left: 145px;
+    
     width: 60px;
     top: 30px;
     background-color: rgba(243, 215, 125, 0.705);
+    box-shadow: 2px 1px 10px rgba(10, 10, 10, 0.37);
 }
-.Link ul li{
-width: 40px;
 
+.Link ul li {
+    width: 40px;
+    
 }
+
 .Link ul li a {
     font-size: 5px;
     text-align: center;
