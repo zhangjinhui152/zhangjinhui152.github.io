@@ -19,17 +19,17 @@ li{
 }
 
 .box01 ul em img{
-
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -25px;
     width:15%;
     height: 15%;
+
+
 }
 .box01  {
     width: 335px;
     position: relative;
-}
-.box01 ul em img{
-
-    position: absolute;
-    top: 0;
-    right: 0;
+    background-color: bisque;
 }
