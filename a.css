@@ -11,6 +11,12 @@ li{
     color: rgb(44, 100, 156);
     font-weight: 400;
 }
+.info{
+    margin: 20px;
+    font-size: 14px;
+    color: rgb(44, 100, 156);
+    font-weight: 400;
+}
 
 .box01 ul em img{
 
