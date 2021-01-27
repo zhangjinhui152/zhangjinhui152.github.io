@@ -2,10 +2,12 @@
     position: relative;
     width: 520px;
     height: 280px;
-    background-color: rgb(202, 226, 247);
+    margin-top: 200px;
+    background-color: #cae2f7;
 
 }
 .tb-promo img {
+    
     width: 520px;
     height: 280px;
 }
@@ -40,6 +42,33 @@
     border-bottom-left-radius: 15px;
     color: rgba(188, 117, 255, 0.5);
 }
+
+
+.promo-nav {
+
+    position: absolute;
+    bottom: 15px;
+    left :50%;
+    margin-left:-35px ;
+    width: 70px;
+    height: 13px;
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 7px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .back {
     position: fixed;

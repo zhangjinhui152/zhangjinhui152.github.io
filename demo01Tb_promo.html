@@ -7,19 +7,40 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="./css/demo01.css">
+
 <body>
     <h6 class="back"><a href="index.html">comeback></a></h6>
     <div class="tb-promo">
         <img src="./image/demo01.jpg" alt="" srcset="">
-        <a href="#" class="prev1"><</a>
-        <a href="#" class="next1">></a>
-
+        <a href="#" class="prev1">
+            <</a> <a href="#" class="next1">>
+        </a>
+        <ul class="promo-nav">
+            <li class="select"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 
 
 </body>
 <style>
-    
+    .promo-nav li{
+        float: left;
+        margin: 3px;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        list-style: none;
+        background-color: rgb(255, 255, 255);
+
+
+    }
+    .promo-nav .select{
+        background-color: aqua;
+    }
 </style>
 
 </html>
