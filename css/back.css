@@ -1,0 +1,14 @@
+.back  a{
+    position: absolute;
+    left: 94%;
+    display: block;
+    text-align: center;
+    height: 30px;
+    width: 95px;
+    line-height: 30px;
+    font-size: 14px;
+    background-color: blanchedalmond;
+    text-decoration: none;
+    color: rgb(170, 150, 36);
+}
+

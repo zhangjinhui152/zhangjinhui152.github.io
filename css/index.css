@@ -32,7 +32,7 @@ a {
 
     /* width: 50px; */
 
-    font-size: 5px;
+    font-size: 10px;
     text-align: center;
 
     color: #491816;
@@ -48,8 +48,9 @@ a {
     display: none;
     position: absolute;
     
-    width: 60px;
+    width: 65px;
     top: 30px;
+    left: -0px;
     background-color: rgba(243, 215, 125, 0.705);
     box-shadow: 2px 1px 10px rgba(10, 10, 10, 0.37);
 }
@@ -62,4 +63,12 @@ a {
 .Link ul li a {
     font-size: 5px;
     text-align: center;
+}
+.LinkTo li{
+
+    overflow: hidden;
+}
+.LinkTo li:hover .header{
+    display: none;
+    background-color: #491816;
 }
