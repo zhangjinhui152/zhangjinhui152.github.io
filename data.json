@@ -2,8 +2,8 @@
     "blog": [
         {
             "id":"967297a1-e5b2-4f40-86a1-54358e6a85eb",
-            "title": "Hello World!",
-            "subtitle": "Hello World!",
+            "title": "vcpkg cmake vscode 折腾日记",
+            "subtitle": "折腾日记",
             "date": "2024-9-08",
             "img":"https://s3.bmp.ovh/imgs/2024/08/21/ea1485e32b39b09d.jpg",
             "tags": [
@@ -13,8 +13,8 @@
         },
         {
             "id":"a9c18f62-b6f4-4f58-af1c-3962862b9eb7",
-            "title": "Hello World!",
-            "subtitle": "Hello World!",
+            "title": "conan vscode 双端折腾",
+            "subtitle": "折腾日记",
             "date": "2024-10-08",
             "img":"https://s3.bmp.ovh/imgs/2024/08/05/dc7a1c812d05c934.png",
             "tags": [
