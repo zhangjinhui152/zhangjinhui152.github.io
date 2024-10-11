@@ -2,7 +2,7 @@
     <div>
         <div class="projcard-container">
             <!--  -->
-            <div class="projcard projcard-blue" v-for="item in blog.blog">
+            <div class="projcard projcard-blue" v-for="item in dataJSon">
                 <div class="projcard-innerbox">
                     <img class="projcard-img" :src="item.img" />
                     <div class="projcard-textbox">
@@ -10,8 +10,7 @@
                         <div class="projcard-subtitle">{{ item.subtitle }}</div>
                         <div class="projcard-bar"></div>
                         <div class="projcard-description">
-                            {{ getRawText(item.content).slice(0, 50) }}
-                          
+                            {{ getRawText(item.content) }}
                         </div>
                         <div @click="go(item.id)" style="margin: 10px 0">goto...</div>
                         <div class="projcard-tagbox">
@@ -21,20 +20,43 @@
                 </div>
             </div>
         </div>
+        <textarea name="" id="test"> </textarea>
     </div>
 </template>
 
 <script lang="ts" setup>
+import { onMounted } from "vue";
 import { useRouter } from "vue-router";
-import blog from "../assets/data.json";
+import { useDataJson } from "../store/dataJson";
+import { storeToRefs } from "pinia";
+// import blog from "../assets/data.json";
 const router = useRouter();
-const getRawText = (str: string) => {
-    return decodeURIComponent(atob(str)).trim();
-};
+const store = useDataJson();
+const { dataJSon } = storeToRefs(store);
 
-// const getMainColor = async (imgSrc: string) => {
-  
-// };
+onMounted(() => {
+    document.getElementById("test")?.addEventListener("input", function () {
+        let test = document.getElementById("test") as HTMLInputElement;
+        console.log(btoa(encodeURIComponent(test?.value)));
+    });
+});
+
+const getRawText = (str: string) => {
+    if (!str) {
+        return;
+    }
+    console.log("str :>> ", str);
+    return decodeURIComponent(atob(str)).trim().slice(0, 50);
+};
+const getDataJson = async () => {
+    let res = await fetch("/data.json");
+    let data = await res.json();
+    console.log("res.json() :>> ", data);
+    store.setData(data.blog);
+    console.log("s :>> ", store.getData);
+    console.log("s :>> ", dataJSon.value);
+};
+getDataJson();
 const go = (id: string) => {
     console.log("id :>> ", id);
     router.push({

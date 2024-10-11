@@ -17,9 +17,7 @@
                 </ul>
             </div>
         </div>
-        <textarea name="" id="test">
 
-        </textarea>
         <div id="content">
 
         </div>
@@ -33,19 +31,21 @@
 <script lang="ts" setup>
 import { marked } from "marked";
 import { onMounted } from "vue";
-import blog from '../assets/data.json';
+// import blog from '../assets/data.json';
 import { useRouter } from 'vue-router'
+import { useDataJson } from '../store/dataJson'
+import { storeToRefs } from "pinia";
+const store = useDataJson()
+const { dataJSon } = storeToRefs(store);
 const router = useRouter()
 onMounted(async () => {
+    
     console.log('router.currentRoute.value.query :>> ', router.currentRoute.value.query);
-    let currentBlog = blog.blog.filter(item => item.id == router.currentRoute.value.query.id)[0]
+    let currentBlog = dataJSon.value.filter(item => item.id == router.currentRoute.value.query.id)[0]
     let res = await marked.parse(decodeURIComponent(atob(currentBlog.content)).trim());
     document.getElementById("content")!!.innerHTML = res;
     
-    document.getElementById("test")?.addEventListener("input", function () {
-        let test = document.getElementById("test") as HTMLInputElement
-        console.log( btoa(encodeURIComponent(test?.value)));
-    });
+
 });
 </script>
 <style lang="scss">
