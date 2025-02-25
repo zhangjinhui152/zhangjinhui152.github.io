@@ -1,14 +1,52 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue + TS</title>
-    <script type="module" crossorigin src="/assets/index-CdK9OSeq.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B7YJF7n-.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluent Design 2 亚克力风格博客</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script type="module" src="./js/hello.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/BlogPostCard.js"></script>
+    <script type="module" src="./js/BlogList.js"></script>
+</head>
+
+<body>
+    <simple-greeting></simple-greeting>
+    <div class="container">
+        <header class="header">
+            <h1>我的博客</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">文章</a></li>
+                    <li><a href="#">联系</a></li>
+                </ul>
+            </nav>
+        </header>
+        <blog-list id="blogList"></blog-list>
+
+        <current-foot></current-foot>
+    </div>
+</body>
+<script>
+    const blogList = document.getElementById('blogList');
+
+    // 初始数据
+    blogList.posts = [
+        {
+            title: 'mygo 1',
+            date: '2023年10月1日',
+            content: '这是第一篇文章的内容。',
+        },
+        {
+            title: 'so 2',
+            date: '2023年10月2日',
+            content: '这是第二篇文章的内容。',
+        },
+    ];
+</script>
+
 </html>
