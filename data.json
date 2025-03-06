@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "Item 1",
+            "description": "This is the first item",
+            "cover": "https://s3.bmp.ovh/imgs/2025/01/10/785a52aaed6337ec.jpg",
+            "content": ""
+        },
+        {
+            "id": 2,
+            "title": "Item 1",
+            "description": "This is the first item",
+            "cover": "https://s3.bmp.ovh/imgs/2024/09/25/d91b098088cce933.jpg",
+            "content": "<p>This is the first item</p>"
+        },
+        {
+            "id": 1,
+            "title": "Item 1",
+            "description": "This is the first item",
+            "cover": "https://s3.bmp.ovh/imgs/2024/08/21/ea1485e32b39b09d.jpg",
+            "content": "<p>This is the first item</p>"
+        }
+    ]
+}

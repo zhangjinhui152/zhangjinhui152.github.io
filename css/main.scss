@@ -1,0 +1,163 @@
+// 定义颜色变量
+$color-scheme: (
+    light: (primary: #0077b6, // 反射蓝（主色调）
+        secondary: #00b4d8, // 清新蓝（次色调）
+        background: #f0f8ff, // 浅海蓝（背景色）
+        text: #2b2b2b, // 深灰色（文字颜色）
+        accent: #90e0ef, // 海鸥白（点缀色）
+        card-bg: #ffffff, // 纯白（卡片背景）
+        card-shadow: rgba(0, 0, 0, 0.07), // 卡片阴影
+        link: #0077b6, // 链接颜色
+        link-hover: #023e8a, // 链接悬停颜色
+        button-bg: #00b4d8, // 按钮背景
+        button-text: #ffffff, // 按钮文字
+        green: #2a9d8f, // 小岛的绿色
+    ),
+    dark: (primary: #48cae4, // 反射蓝（主色调）
+        secondary: #90e0ef, // 清新蓝（次色调）
+        background: #1a1a1a, // 深灰色（背景色）
+        text: #e0e0e0, // 浅灰色（文字颜色）
+        accent: #0077b6, // 海鸥白（点缀色）
+        card-bg: #2b2b2b, // 深灰色（卡片背景）
+        card-shadow: rgba(255, 255, 255, 0.07), // 卡片阴影
+        link: #90e0ef, // 链接颜色
+        link-hover: #48cae4, // 链接悬停颜色
+        button-bg: #00b4d8, // 按钮背景
+        button-text: #ffffff, // 按钮文字
+        green: #2a9d8f, // 小岛的绿色
+    )
+);
+
+:root {
+    /* Light theme colors */
+    --umi_primary: #0077b6;
+    --umi_secondary: #00b4d8;
+    --umi_background: #f0f8ff;
+    --umi_text: #2b2b2b;
+    --umi_accent: #90e0ef;
+    --umi_card-bg: #ffffff;
+    --umi_card-shadow: rgba(0, 0, 0, 0.07);
+    --umi_link: #0077b6;
+    --umi_link-hover: #023e8a;
+    --umi_button-bg: #00b4d8;
+    --umi_button-text: #ffffff;
+    --umi_green: #2a9d8f;
+
+
+    --umi_primary_dark: #48cae4;
+    --umi_secondary_dark: #90e0ef;
+    --umi_background_dark: #1a1a1a;
+    --umi_text_dark: #e0e0e0;
+    --umi_accent_dark: #0077b6;
+    --umi_card_dark-bg: #2b2b2b;
+    --umi_card_dark-shadow: rgba(255, 255, 255, 0.07);
+    --umi_link_dark: #90e0ef;
+    --umi_link_dark-hover: #48cae4;
+    --umi_button_dark-bg: #00b4d8;
+    --umi_button_dark-text: #ffffff;
+    --umi_green_dark: #2a9d8f;
+}
+
+
+
+
+
+// 全局样式
+html {
+    background-image: url(https://s3.bmp.ovh/imgs/2024/11/19/ada2bb34996f9005.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main {
+
+    // 头部样式
+    .header {
+        padding: 1% 2%;
+        margin-bottom: 40px;
+        margin: 0 auto;
+        width: 56%;
+        color: light-dark(var(--umi_text), var(--umi_text_dark));
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+            color: light-dark(var(--umi_background), var(--umi_background_dark));
+
+            &:hover {
+                background: light-dark(var(--umi_accent), var(--umi_accent_dark));
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        .card {
+            width: 70%;
+            margin-top: 10px;
+        }
+    }
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0%;
+    background-color: light-dark(var(--umi_card-bg), var(--umi_card_dark-bg));
+    box-shadow: light-dark(rgba(0, 0, 0, 0.07) 0px 1px 1px,
+            rgba(255, 255, 255, 0.07) 0px 1px 1px);
+    border-radius: 15px;
+
+    .headimg {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 4%;
+        word-wrap: break-word;
+
+        p,
+        li,
+        pre,
+        code {
+            word-wrap: break-word;
+            width: 89%;
+        }
+
+        pre code {
+            display: block;
+            white-space: pre-wrap;
+        }
+
+        ::marker {
+            word-wrap: break-word;
+        }
+    }
+}
+
+/* 当屏幕宽度小于或等于768px时，将.post的宽度设置为80% */
+@media (max-width: 1668px) {
+    .post {
+        width: 70%;
+    }
+}

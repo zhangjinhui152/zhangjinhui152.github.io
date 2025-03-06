@@ -1,32 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Post - Fluent Design 2</title>
-  <link rel="stylesheet" href="./css/main.css">
-  <script type="module" src="./js/BlogPostDetail.js"></script>
-  <script type="module" src="./js/footer.js"></script>
-  <script type="module" src="./js/BlogPostDetailList.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluent Design 2 亚克力风格博客</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+
+    <script type="module" src="./js/compont.js"></script>
+    <script src="./js/data.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <header class="header">
-      <h1>My Fluent Design Blog</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <blog-post-detail-list id="blogPostDetailList"></blog-post-detail-list>
-    
-    <current-foot></current-foot>
-  </div>
+
+
+    <div class="main">
+        <header class="header">
+            <h1>我的博客</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">文章</a></li>
+                    <li><a href="#">联系</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="post">
+            <img id="postImg" src="https://s3.bmp.ovh/imgs/2024/12/31/fc10fd6b21441010.jpg" alt="" class="headimg">
+            <div id="content" class="content">
+                11
+            </div>
+        </div>
+    </div>
+
 </body>
+<style>
+
+</style>
+<script type="module">
+    import { marked } from "./js/marked.esm.js";
+    let param = new URLSearchParams(location.search);
+    console.log('param.get( :>> ', param.get('id'));
+    let text = blogData.filter(f => f.id == param.get('id'))[0]
+    console.log('text :>> ', text);
+    document.getElementById('content').innerHTML = marked.parse(text.content);
+
+
+    document.getElementById('postImg').src = text.cover;
+</script>
 
 </html>
