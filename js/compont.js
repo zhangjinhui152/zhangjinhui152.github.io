@@ -20,7 +20,7 @@ class FancyBlogCard extends LitElement {
             width:100%;
             display: flex;
             height: 280px;
-            background: rgba(255, 255, 255, 0.3);
+            background:  light-dark(var(--summer_background_transparent),var(--summer_background_transparent_dark));
             backdrop-filter: blur(20px);
             border-radius: 12px;
             overflow: hidden;
@@ -61,7 +61,7 @@ class FancyBlogCard extends LitElement {
         h3 {
             font-size: 1.8em;
             margin: 0 0 16px 0;
-            color: #1a1a1a;
+            color:  light-dark(var(--summer_text),var(--summer_text_dark));
             position: relative;
             display: inline-block;
         }
@@ -79,7 +79,7 @@ class FancyBlogCard extends LitElement {
 
         p {
             user-select: pointer;
-            color: #666;
+            color: light-dark(var(--summer_text),var(--summer_text_dark));;
             line-height: 1.6;
             margin: 0;
         }
