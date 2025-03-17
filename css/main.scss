@@ -40,7 +40,7 @@
     /* 月光白文字 */
     --summer_accent_dark: #7AC1A3;
     /* 夜光绿 */
-    --summer_card_dark-bg: #243B47;
+    --summer_card-bg_dark: #243B47;
     /* 深礁石灰卡片 */
     --summer_card_dark-shadow: rgba(122, 193, 212, 0.15);
     --summer_link_dark: #7AC1D4;
@@ -56,7 +56,7 @@
 
 
 
-    --background-image:url(https://s3.bmp.ovh/imgs/2024/11/19/ada2bb34996f9005.jpg);
+    --background-image: url(https://s3.bmp.ovh/imgs/2024/11/19/ada2bb34996f9005.jpg);
 }
 
 
@@ -91,15 +91,16 @@ html {
             padding: 0;
         }
 
-    
+
         nav p {
-            user-select: none ;
+            user-select: none;
             text-decoration: none;
             padding: 8px 12px;
             border-radius: 4px;
             transition: background 0.3s ease;
             color: light-dark(var(--summer_seagullwhite), var(--summer_seagullwhite_dark));
             margin: 0;
+
             &:hover {
                 background: light-dark(var(--summer_link-hover), var(--summer_link_dark));
             }
@@ -109,7 +110,7 @@ html {
     /* 移动端适配 */
     @media (max-width: 768px) {
         .header {
-            
+
             width: 90%;
             /* 在小屏幕上增加宽度 */
             padding: 10px;
@@ -196,11 +197,14 @@ html {
             word-wrap: break-word;
         }
     }
+
+
+
 }
 
 /* 当屏幕宽度小于或等于768px时，将.post的宽度设置为80% */
 @media (max-width: 1668px) {
     .post {
-        width: 70%;
+        width: 90%;
     }
 }

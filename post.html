@@ -20,10 +20,18 @@
             <h1>我的博客</h1>
             <nav>
                 <ul>
-                    <li class="link"><p href="/index.html">首页</p></li>
-                    <li class="link"><p href="/index.html">关于</p></li>
-                    <li class="link"><p href="/index.html">文章</p></li>
-                    <li id="changeDark"><p>切换亮暗</p></li>
+                    <li class="link">
+                        <p href="/index.html">首页</p>
+                    </li>
+                    <li class="link">
+                        <p href="/index.html">关于</p>
+                    </li>
+                    <li class="link">
+                        <p href="/index.html">文章</p>
+                    </li>
+                    <li id="changeDark">
+                        <p>切换亮暗</p>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -32,6 +40,7 @@
             <div id="content" class="content">
                 11
             </div>
+            <!-- <add-comment/> -->
         </div>
     </div>
 
@@ -47,8 +56,29 @@
     console.log('text :>> ', text);
     document.getElementById('content').innerHTML = marked.parse(text.content);
 
-
+    let data = [{
+        "comment_id": 1,
+        "blog_id": 1,
+        "user_name": "111111",
+        "user_email": "11111",
+        "comment_text": "111111",
+        "created_at": "2025-03-17T04:01:29.502Z",
+        "updated_at": "2025-03-17T04:01:29.502Z",
+        "is_approved": true,
+        "parent_comment_id": null
+    }]
+    fetch(`https://blogapi-dae8fdg4asc6g8hk.eastasia-01.azurewebsites.net/api/httpTrigger1?blogId=${param.get('id')}`).then(res => res.json()).then(res => {
+        console.log('res :>> ', res);
+        data = res
+        console.log('data :>> ', data);
+        const commentsList = document.createElement('comments-list');
+        commentsList.comments = data;
+        document.getElementsByClassName("post")[0].appendChild(commentsList)
+        document.getElementsByClassName("post")[0].appendChild(document.createElement('add-comment'))
+    })
     document.getElementById('postImg').src = text.cover;
+
+
 </script>
 
 </html>
