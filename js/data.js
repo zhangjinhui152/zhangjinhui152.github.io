@@ -276,7 +276,7 @@ sidecard模式
 - 需要挂载同一个盘！`
 	},
 	{
-		"id": 4,
+		"id": 9999,
 		"title": "纯留言板",
 		"description": "纯留言板",
 		"cover": "https://s3.bmp.ovh/imgs/2025/03/17/0674fed5a36b22f0.png",
