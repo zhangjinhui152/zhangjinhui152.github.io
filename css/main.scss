@@ -117,7 +117,7 @@ html {
             /* 调整内边距 */
 
             h1 {
-                font-size: 24px;
+                font-size: clamp(16px, 4vw, 1.8em);
                 /* 调整标题字体大小 */
             }
 
@@ -163,6 +163,7 @@ html {
     border-radius: 15px;
 
     h1 {
+        font-size: clamp(16px, 4vw, 1.8em);
         color: light-dark(var(--summer_text), var(--summer_text_dark));
     }
 

@@ -1,10 +1,10 @@
 let blogData = [
-    {
-        "id": 1,
-        "title": "vcpkg vscode搭建cmake ",
-        "description": "使用vcpkg vscode搭建cmake 项目 使用imgui示例 ",
-        "cover": "https://s3.bmp.ovh/imgs/2025/01/10/785a52aaed6337ec.jpg",
-        "content": `
+	{
+		"id": 1,
+		"title": "vcpkg vscode搭建cmake ",
+		"description": "使用vcpkg vscode搭建cmake 项目 使用imgui示例 ",
+		"cover": "https://s3.bmp.ovh/imgs/2025/01/10/785a52aaed6337ec.jpg",
+		"content": `
 # 使用vcpkg vscode搭建cmake 项目 使用imgui示例
   collapsed:: true
 	- 先决条件
@@ -85,13 +85,13 @@ let blogData = [
 			  \`\`\`
 			- 或 cmake 文件 添加 d3d12 dxgi
 			- target_link_libraries(\${PROJECT_NAME} PRIVATE imgui::imgui d3d12 dxgi)`
-    },
-    {
-        "id": 2,
-        "title": "conan 指定编译器为NInja",
-        "description": "conan 指定编译器为NInja install 对应的包",
-        "cover": "https://s3.bmp.ovh/imgs/2024/09/25/d91b098088cce933.jpg",
-        "content": ` # conan 指定编译器为NInja install 对应的包
+	},
+	{
+		"id": 2,
+		"title": "conan 指定编译器为NInja",
+		"description": "conan 指定编译器为NInja install 对应的包",
+		"cover": "https://s3.bmp.ovh/imgs/2024/09/25/d91b098088cce933.jpg",
+		"content": ` # conan 指定编译器为NInja install 对应的包
   collapsed:: true
 	- conan install . --output-folder=build --build=missing -c tools.cmake.cmaketoolchain:generator=Ninja
 	- 破案了 我想要构建工具是Ninja 我在conan profile detect --name=my_custom_profile创建了一个新的配置文件
@@ -192,13 +192,13 @@ let blogData = [
 - [如何获取程序运行的目录？](https://segmentfault.com/q/1010000042689063)
   collapsed:: true
 	- std::cout << std::filesystem::path(argv[0]) << std::endl;`
-    },
-    {
-        "id": 3,
-        "title": "loki日志收集",
-        "description": "This is the first item",
-        "cover": "https://s3.bmp.ovh/imgs/2024/08/21/ea1485e32b39b09d.jpg",
-        "content": `# 日志收集
+	},
+	{
+		"id": 3,
+		"title": "loki日志收集",
+		"description": "This is the first item",
+		"cover": "https://s3.bmp.ovh/imgs/2024/08/21/ea1485e32b39b09d.jpg",
+		"content": `# 日志收集
 
 \`\`\`
 sudo helm upgrade --install loki grafana/loki-stack \
@@ -274,5 +274,13 @@ count_over_time(
 - 然后通过line_format 来格式化日期
 sidecard模式
 - 需要挂载同一个盘！`
-    }
+	},
+	{
+		"id": 4,
+		"title": "纯留言板",
+		"description": "纯留言板",
+		"cover": "https://s3.bmp.ovh/imgs/2025/03/17/0674fed5a36b22f0.png",
+		"content":"纯留言板"
+	},
 ]
+blogData = blogData.reverse()

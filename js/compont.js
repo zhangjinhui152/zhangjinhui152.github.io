@@ -59,7 +59,7 @@ class FancyBlogCard extends LitElement {
         }
 
         h3 {
-            font-size: 1.8em;
+            font-size: clamp(16px, 4vw, 1.8em);
             margin: 0 0 16px 0;
             color:  light-dark(var(--summer_text),var(--summer_text_dark));
             position: relative;
@@ -295,7 +295,8 @@ class CommentsList extends LitElement {
         width: 100%;
         padding: 4%;
         word-wrap: break-word;
-        height: 400px;
+        
+        max-height:400px;
         overflow: scroll;
       }
       .content.comments::-webkit-scrollbar {
